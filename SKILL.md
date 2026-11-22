@@ -102,9 +102,15 @@ const currentStyle = getStyle("comic_noir"); // or "papercraft", "rubber_hose", 
 - **Zero Object Clipping**:
   - Maintain strict clearance planes between character billboards, furniture tops, props, and screen-space FX text billboards.
 
-### Stop 5: Articulated Rig & Volumetric Vitality
+### Stop 5: Articulated Rig, Volumetric Vitality & Context-Motivated Movement
+- **Context-Motivated Movement (Zero Idle Fidgeting / No Treadmill Legs)**:
+  - Characters MUST ONLY move when motivated by narrative context, story beats, or physical locomotion across space.
+  - When standing at a counter, desk, ladder, or mark ($v_{\text{world}} = 0$), characters MUST be set to `mode: "stand"`.
+  - In `stand` mode, feet are strictly planted on the floor with **ZERO leg cycling, ZERO knee pumping, and ZERO foot paddling**.
+  - Locomotion walk/march cycles are strictly prohibited unless the character's root position is actively translating across world coordinates ($v_{\text{world}} > 0$).
+  - Upper body movement is motivated by story causality: intentional arm reaches, accidental bumps, head turns, downward gaze tracking, and facial expression swaps on story beats.
 - **Volumetric Character Vitality**:
-  - Subtle sinusoidal **breathing cycles** and dynamic pelvic **weight shifting** to give characters physical volume and presence.
+  - Subtle sinusoidal **breathing cycles** and dynamic pelvic **weight shifting** give characters physical volume without nervous twitching.
   - Intentional **physical impulse interactions** (elbow bumps, reaching, pushing) establishing clear causality for object movements.
   - **Downward Gaze Tracking**: Correct canvas coordinate orientation ($+Y$ down), ensuring character pupils actively track action and falling props.
 - **Analytical 2-Bone IK** (`templates/physics/ik.ts`):
