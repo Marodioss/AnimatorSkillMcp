@@ -1,0 +1,234 @@
+[
+  {
+    "w": "Your",
+    "s": 0.15,
+    "e": 0.3242,
+    "f_start": 4,
+    "f_end": 9,
+    "viseme": "wq"
+  },
+  {
+    "w": "toast",
+    "s": 0.3344,
+    "e": 0.652,
+    "f_start": 10,
+    "f_end": 19,
+    "viseme": "o"
+  },
+  {
+    "w": "isn't",
+    "s": 0.6623,
+    "e": 0.857,
+    "f_start": 19,
+    "f_end": 25,
+    "viseme": "e"
+  },
+  {
+    "w": "cursed",
+    "s": 0.8672,
+    "e": 1.236,
+    "f_start": 26,
+    "f_end": 37,
+    "viseme": "ai"
+  },
+  {
+    "w": "it's",
+    "s": 1.5127,
+    "e": 1.6664,
+    "f_start": 45,
+    "f_end": 49,
+    "viseme": "e"
+  },
+  {
+    "w": "table",
+    "s": 1.6766,
+    "e": 1.943,
+    "f_start": 50,
+    "f_end": 58,
+    "viseme": "mbp"
+  },
+  {
+    "w": "physics",
+    "s": 1.9532,
+    "e": 2.486,
+    "f_start": 58,
+    "f_end": 74,
+    "viseme": "fv"
+  },
+  {
+    "w": "Dropped",
+    "s": 2.55,
+    "e": 2.8574,
+    "f_start": 76,
+    "f_end": 85,
+    "viseme": "mbp"
+  },
+  {
+    "w": "from",
+    "s": 2.8676,
+    "e": 3.0008,
+    "f_start": 86,
+    "f_end": 90,
+    "viseme": "fv"
+  },
+  {
+    "w": "counter",
+    "s": 3.011,
+    "e": 3.2979,
+    "f_start": 90,
+    "f_end": 98,
+    "viseme": "ai"
+  },
+  {
+    "w": "height",
+    "s": 3.3082,
+    "e": 3.5848,
+    "f_start": 99,
+    "f_end": 107,
+    "viseme": "ai"
+  },
+  {
+    "w": "torque",
+    "s": 3.6873,
+    "e": 3.8922,
+    "f_start": 110,
+    "f_end": 116,
+    "viseme": "o"
+  },
+  {
+    "w": "allows",
+    "s": 3.9025,
+    "e": 4.2508,
+    "f_start": 117,
+    "f_end": 127,
+    "viseme": "ai"
+  },
+  {
+    "w": "only",
+    "s": 4.261,
+    "e": 4.4557,
+    "f_start": 127,
+    "f_end": 133,
+    "viseme": "o"
+  },
+  {
+    "w": "half",
+    "s": 4.466,
+    "e": 4.6811,
+    "f_start": 133,
+    "f_end": 140,
+    "viseme": "ai"
+  },
+  {
+    "w": "a",
+    "s": 4.6914,
+    "e": 4.7221,
+    "f_start": 140,
+    "f_end": 141,
+    "viseme": "ai"
+  },
+  {
+    "w": "rotation",
+    "s": 4.7324,
+    "e": 5.3164,
+    "f_start": 141,
+    "f_end": 159,
+    "viseme": "o"
+  },
+  {
+    "w": "Result",
+    "s": 5.45,
+    "e": 5.9213,
+    "f_start": 163,
+    "f_end": 177,
+    "viseme": "e"
+  },
+  {
+    "w": "butter",
+    "s": 6.1057,
+    "e": 6.3414,
+    "f_start": 183,
+    "f_end": 190,
+    "viseme": "mbp"
+  },
+  {
+    "w": "slaps",
+    "s": 6.3516,
+    "e": 6.7103,
+    "f_start": 190,
+    "f_end": 201,
+    "viseme": "ai"
+  },
+  {
+    "w": "the",
+    "s": 6.7205,
+    "e": 6.7922,
+    "f_start": 201,
+    "f_end": 203,
+    "viseme": "e"
+  },
+  {
+    "w": "floor",
+    "s": 6.8025,
+    "e": 7.2225,
+    "f_start": 204,
+    "f_end": 216,
+    "viseme": "fv"
+  },
+  {
+    "w": "To",
+    "s": 7.4,
+    "e": 7.5127,
+    "f_start": 222,
+    "f_end": 225,
+    "viseme": "u"
+  },
+  {
+    "w": "fix",
+    "s": 7.5229,
+    "e": 7.7791,
+    "f_start": 225,
+    "f_end": 233,
+    "viseme": "fv"
+  },
+  {
+    "w": "it",
+    "s": 7.7893,
+    "e": 7.9737,
+    "f_start": 233,
+    "f_end": 239,
+    "viseme": "e"
+  },
+  {
+    "w": "Build",
+    "s": 8.6717,
+    "e": 8.9381,
+    "f_start": 260,
+    "f_end": 268,
+    "viseme": "mbp"
+  },
+  {
+    "w": "a",
+    "s": 8.9483,
+    "e": 8.9996,
+    "f_start": 268,
+    "f_end": 269,
+    "viseme": "ai"
+  },
+  {
+    "w": "ten-foot",
+    "s": 9.0098,
+    "e": 9.4197,
+    "f_start": 270,
+    "f_end": 282,
+    "viseme": "u"
+  },
+  {
+    "w": "table",
+    "s": 9.4299,
+    "e": 9.8295,
+    "f_start": 282,
+    "f_end": 294,
+    "viseme": "mbp"
+  }
+]

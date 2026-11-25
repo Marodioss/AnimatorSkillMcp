@@ -3,13 +3,21 @@
 import { Pen, Outfit } from "../../bridge/toon";
 import { ArticulatedCharacterRig, RigPoseOptions } from "../../character/rig";
 
+export interface ComicPoseOptions extends RigPoseOptions {
+  breath?: number;
+  weightShift?: number;
+  expr?: string;
+  volumetric?: boolean;
+  gazeY?: number;
+}
+
 export class ComicRig {
   private baseRig = new ArticulatedCharacterRig();
 
   /**
    * Draws a character styled as a graphic-novel comic illustration.
    */
-  draw(p: Pen, outfit: Outfit, opts: RigPoseOptions, dt = 1 / 30): void {
+  draw(p: Pen, outfit: Outfit, opts: ComicPoseOptions, dt = 1 / 30): void {
     // 1. High-contrast comic albedo palette override
     const comicOutfit: Outfit = {
       ...outfit,

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "animator-skill": {
+      "command": "python",
+      "args": [
+        "/ABS/PATH/TO/AnimatorSkillMcp/mcp_server/server.py"
+      ]
+    }
+  }
+}

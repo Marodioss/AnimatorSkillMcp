@@ -1,0 +1,46 @@
+# Secrets & environment variables (NEVER commit API keys)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Python caches & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Node & Remotion build outputs
+node_modules/
+.remotion/
+dist/
+build/
+*.tsbuildinfo
+
+# Rendered videos, heavy generated audio stems, & temp QA outputs
+*.mp4
+*.mov
+*.webm
+*.avi
+studio/cartoon_engine/out/
+studio/cartoon_engine/public/*.wav
+studio/cartoon_engine/public/*.mp3
+studio/episodes/**/voice/*.wav
+studio/episodes/**/voice/*.mp3
+studio/episodes/**/audio/*.wav
+studio/episodes/**/audio/*.mp3
+studio/episodes/**/out/
+studio/episodes/**/qa*/
+_cache/
+*.npz
+temp_*/
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

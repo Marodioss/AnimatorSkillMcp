@@ -1,0 +1,17 @@
+{
+  "name": "animator-skill-mcp",
+  "version": "2.0.0",
+  "description": "Ultimate 2D-in-3D animated shorts MCP server, 9-Stop physics & QA suite, Kounkan+ Hybrid style engine, and multi-style Remotion + Three.js studio.",
+  "author": "Marodioss",
+  "repository": "https://github.com/Marodioss/AnimatorSkillMcp",
+  "license": "MIT",
+  "skills": [
+    "SKILL.md"
+  ],
+  "commands": [
+    "commands/cartoon-short.md",
+    "commands/animated-short.md",
+    "commands/cartoon-3d-short.md"
+  ],
+  "mcpServers": ".mcp.json"
+}

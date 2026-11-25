@@ -1,13 +1,32 @@
 ---
 name: cartoon-3d-short
-description: Make high-detail, physics-accurate, ~55-70 s vertical cartoon story shorts in 8 distinct visual styles (Storybook, Spider-Verse Comic Noir, Stop-Motion Papercraft, 1930s Rubber Hose, Kurzgesagt Vector Infographic, 2.5D Anime Sakuga, Retro 90s PS1, and Sumi-e Ink Wash), rendered with Three.js inside Remotion. Enforces the strict 9-Stop production gate with exact collision physics, zero object clipping, volumetric character vitality, and zero slacking in animation or code. Trigger when the user asks to make an animated short, story video, cartoon short, or invokes /cartoon-short, /animated-short, or /cartoon-3d-short with any topic or story idea.
+description: Make high-detail, physics-accurate, ~55-70 s vertical cartoon story shorts in Kounkan+ Hybrid 2D-in-3D and 8 visual styles (Storybook, Spider-Verse Comic Noir, Stop-Motion Papercraft, 1930s Rubber Hose, Kurzgesagt Vector Infographic, 2.5D Anime Sakuga, Retro 90s PS1, and Sumi-e Ink Wash), rendered with Three.js inside Remotion. Backed by the AnimatorSkillMcp FastMCP server and the strict 9-Stop production gate. Trigger when the user asks to make an animated short, story video, cartoon short, or invokes /cartoon-short, /animated-short, or /cartoon-3d-short with any topic or story idea.
 ---
 
-# Cartoon 3D Story Short Engine (Multi-Style & Physics-Accurate)
+# Cartoon 3D Story Short Engine (AnimatorSkillMcp — Multi-Style & Kounkan+ Hybrid)
 
-Proven benchmarks: 
-- **The Bridge That Fell for a Song** (67 s vertical short about the 1831 Broughton suspension bridge collapse).
-- **The Buttered Toast Law** (10 s multi-style short across Comic Noir, 1930s Rubber Hose, and Kurzgesagt styles).
+Proven benchmarks:
+- **Burn It to Earn It — Episode 1** (`studio/episodes/imad_episode1`, 70.0 s Kounkan+ Hybrid 2D-in-3D vertical short: `28` shots / `2.50s` avg, `6` custom 2D close-up inserts, safe-zone word captions, `-14.4 LUFS` stereo).
+- **The Bridge That Fell for a Song** (`templates/bridge/`, 67 s vertical short about the 1831 Broughton suspension bridge collapse).
+- **The Buttered Toast Law** (`studio/episodes/toast_physics/`, 10 s multi-style showcase across Comic Noir, 1930s Rubber Hose, and Kurzgesagt styles).
+
+## AnimatorSkillMcp Server Tools (Preferred Workflow)
+
+When connected to the `animator-skill` MCP server (`mcp_server/server.py`), prefer calling these tools directly instead of manually re-implementing audio/scaffold boilerplate:
+1. `preflight_studio()` — Verify Python, FFmpeg, Node/Remotion, WebGL Chrome/Edge, and `assets/sfx/` readiness.
+2. `list_styles_and_stops()` — Inspect `kounkan_plus` + 8 visual styles and the 9-Stop gates.
+3. `create_episode_project(slug, title, premise, style, duration_sec)` — Scaffold `SCRIPT.md`, `character_bible.json`, `shots.json` (`2.5s` beats), and `segments_config.json`.
+4. `generate_voice_with_alignment(segments_json, out_dir, total_duration)` — Generate `$0` Edge-TTS multi-voice stems with zero segment overlaps, `lip_sync=False` inner-monologue/narrator separation, and exact `WordBoundary` alignment (`words.json` / `segments.json`).
+5. `master_audio_mix(voice_wav, words_json, out_wav, target_lufs)` — Mix speech-ducked stereo music + look-ahead limiter to `-14.4 LUFS` stereo (`48 kHz`, `<= -1.2 dBTP`).
+6. `render_short_video(composition_id, out_path, audio_wav, still_frame)` — Render single QA still checks or full `1080x1920` ANGLE WebGL MP4 + AAC mux.
+7. `audit_short_quality(video_mp4, words_json, segments_json)` — Verify zero overlaps, `ffprobe` streams, EBU R128 loudness, cut cadence, and physics/cadence self-tests.
+
+## Kounkan+ Hybrid 2D-in-3D Architecture Rules (`kounkan_plus`)
+
+- **Pacing**: Cut every `2.0–3.5s` (`20–30+` shots in a 60–70 s short), alternating wide café/environment shots, true OTS angles, extreme reaction close-ups, and dedicated full-screen **2D illustrated close-up mechanical/UI insert panels**.
+- **Safe-Zone Screen-Space UI (`<AbsoluteFill>`)**: Never place floating HUD cards or subtitles inside 3D world-space `z` planes where they can clip edges or occlude characters. Render HUD banners above `y >= 15%` (`~294px` at `1080x1920`, clearing character heads) and word-highlighted captions cleanly inside the bottom safe zone (`bottom >= 20%`).
+- **Inner Monologue vs. Lip-Sync Separation**: Mark voiceover (`*_vo`, `narrator`) segments `lip_sync: false` so character mouths remain reactive/still during thoughts instead of flapping during narration.
+- **3D Scene Depth**: Place atmospheric sunbeams behind actors (`z < actor_z`) so transparent planes never slice character sprites through the depth buffer.
 
 Composition standard: 1080x1920 (preview/stills) to 1440x2560 (final 2K master), 30 fps.
 Zero-Slacking Policy: Strict compliance with all 9 Production Stops. No simplified curve shortcuts, no foot skating, zero object clipping, exact surface collisions, and zero per-frame heap allocations.
