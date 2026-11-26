@@ -16,11 +16,13 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 def link_or_copy(src: Path, dst: Path) -> None:
     dst.parent.mkdir(parents=True, exist_ok=True)
-    if dst.exists() or dst.is_symlink():
-        if dst.is_symlink() or dst.is_file():
-            dst.unlink()
-        else:
-            shutil.rmtree(dst)
+    is_junc = hasattr(dst, "is_junction") and dst.is_junction()
+    if is_junc:
+        os.rmdir(dst)
+    elif dst.is_symlink() or dst.is_file():
+        dst.unlink()
+    elif dst.exists():
+        shutil.rmtree(dst)
     try:
         os.symlink(str(src), str(dst), target_is_directory=src.is_dir())
         print(f"  [symlink] {dst} -> {src}")
